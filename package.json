@@ -1,0 +1,32 @@
+{
+  "name": "metro-exports-smartbundle-bug",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "scripts": {
+    "build:full": "metro build ./full.js --out ./full.bundle.js --platform node",
+    "run:full": "node ./full.bundle.js",
+    "full": "npm run build:full && npm run run:full",
+    "node:full": "node ./full.js",
+
+    "build:root": "metro build ./root.js --out ./root.bundle.js --platform node",
+    "run:root": "node ./root.bundle.js",
+    "root": "npm run build:root && npm run run:root",
+    "node:root": "node ./root.js",
+
+    "build:subdir": "metro build ./subdir.js --out ./subdir.bundle.js --platform node",
+    "run:subdir": "node ./subdir.bundle.js",
+    "subdir": "npm run build:subdir && npm run run:subdir",
+    "node:subdir": "node ./subdir.js",
+
+    "node:all": "npm run node:full && npm run node:root && npm run node:subdir",
+    "all": "npm run full && npm run root && npm run subdir"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "metro": "^0.81.0",
+    "metro-runtime": "^0.81.0"
+  }
+}
